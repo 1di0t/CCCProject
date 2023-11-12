@@ -50,9 +50,9 @@
             this.Member_age_LB = new System.Windows.Forms.Label();
             this.Member_name_LB = new System.Windows.Forms.Label();
             this.Member_add = new System.Windows.Forms.TextBox();
-            this.Member_gender = new System.Windows.Forms.TextBox();
             this.Member_age = new System.Windows.Forms.TextBox();
             this.Member_name = new System.Windows.Forms.TextBox();
+            this.genderCombo = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -250,12 +250,12 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.genderCombo);
             this.panel3.Controls.Add(this.Member_add_LB);
             this.panel3.Controls.Add(this.Member_gender_LB);
             this.panel3.Controls.Add(this.Member_age_LB);
             this.panel3.Controls.Add(this.Member_name_LB);
             this.panel3.Controls.Add(this.Member_add);
-            this.panel3.Controls.Add(this.Member_gender);
             this.panel3.Controls.Add(this.Member_age);
             this.panel3.Controls.Add(this.Member_name);
             this.panel3.Location = new System.Drawing.Point(162, 121);
@@ -311,19 +311,11 @@
             this.Member_add.TabIndex = 8;
             this.Member_add.TextChanged += new System.EventHandler(this.Member_add_TextChanged);
             // 
-            // Member_gender
-            // 
-            this.Member_gender.Location = new System.Drawing.Point(211, 64);
-            this.Member_gender.Name = "Member_gender";
-            this.Member_gender.Size = new System.Drawing.Size(42, 21);
-            this.Member_gender.TabIndex = 9;
-            this.Member_gender.TextChanged += new System.EventHandler(this.Member_gender_TextChanged);
-            // 
             // Member_age
             // 
             this.Member_age.Location = new System.Drawing.Point(111, 64);
             this.Member_age.Name = "Member_age";
-            this.Member_age.Size = new System.Drawing.Size(42, 21);
+            this.Member_age.Size = new System.Drawing.Size(55, 21);
             this.Member_age.TabIndex = 10;
             this.Member_age.TextChanged += new System.EventHandler(this.Member_age_TextChanged);
             // 
@@ -334,6 +326,18 @@
             this.Member_name.Size = new System.Drawing.Size(70, 21);
             this.Member_name.TabIndex = 11;
             this.Member_name.TextChanged += new System.EventHandler(this.Member_name_TextChanged);
+            // 
+            // genderCombo
+            // 
+            this.genderCombo.FormattingEnabled = true;
+            this.genderCombo.Items.AddRange(new object[] {
+            "남",
+            "여"});
+            this.genderCombo.Location = new System.Drawing.Point(211, 64);
+            this.genderCombo.Name = "genderCombo";
+            this.genderCombo.Size = new System.Drawing.Size(36, 20);
+            this.genderCombo.TabIndex = 16;
+            this.genderCombo.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // MainUserinfo
             // 
@@ -382,9 +386,9 @@
         private System.Windows.Forms.Label Member_age_LB;
         private System.Windows.Forms.Label Member_name_LB;
         private System.Windows.Forms.TextBox Member_add;
-        private System.Windows.Forms.TextBox Member_gender;
         private System.Windows.Forms.TextBox Member_age;
         private System.Windows.Forms.TextBox Member_name;
+        private System.Windows.Forms.ComboBox genderCombo;
     }
 }
 

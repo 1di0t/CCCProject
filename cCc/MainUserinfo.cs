@@ -13,9 +13,10 @@ namespace cCc
 {
     public partial class MainUserinfo : Form
     {
-        private string user_id;
-        private string drive_type;
-        private string car_type;
+        private string user_id;//유저 고유번호 저장 변수
+        private string drive_type;//주행습관 저장 변수
+        private string car_type;//자동차 타입 저장 변수
+        private string gender;//성별 저장 변수
 
         MySqlConnection connection = new MySqlConnection("Server = 219.248.39.216;Database=cccdb;Uid=root;Pwd=root;");//SQL서버 객체 생성
         MySqlCommand command = null;
@@ -124,6 +125,11 @@ namespace cCc
         //차량 종류 콤보박스 (소형,중형,대형)//C_typeBox
         {
         }
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        //성별 콤보박스//genderCombo
+        {
+
+        }
 
         private void U_type1_CheckedChanged_1(object sender, EventArgs e)//type_soft//라디오버튼
         {
@@ -143,11 +149,18 @@ namespace cCc
         private void Type_bt_Click(object sender, EventArgs e)
         //수정 버튼
         {
+            if (genderCombo.SelectedItem != null)//성별 콤보박스가 빈칸인지 확인
+            {//빈칸이 아닐경우
+                gender = genderCombo.SelectedItem.ToString();//car_type변수에 차량타입 저장
+            }//빈칸일 경우
+            else
+            {
+                MessageBox.Show("차량 타입을 선택해 주세요");
+            }
 
             if (C_typeBox.SelectedItem != null)//차량타입 콤보박스가 빈칸인지 확인
             {//빈칸이 아닐경우
                 car_type = C_typeBox.SelectedItem.ToString();//car_type변수에 차량타입 저장
-                MessageBox.Show(car_type);
             }//빈칸일 경우
             else
             {
@@ -156,7 +169,7 @@ namespace cCc
 
 
             string insertQuery = "INSERT INTO MEMBER_INFO_TB VALUES (" 
-                + user_id+",'" + Member_name.Text + "'," + Int32.Parse(Member_age.Text) + ",'" + Member_gender.Text+ "','" 
+                + user_id+",'" + Member_name.Text + "'," + Int32.Parse(Member_age.Text) + ",'" + gender+ "','" 
                 + Member_add.Text + "','" + drive_type + "','" + car_type + "');";
             //회원정보 삽입 질의문
 
@@ -203,5 +216,7 @@ namespace cCc
         {
 
         }
+
+
     }
 }
