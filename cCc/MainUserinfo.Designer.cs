@@ -38,13 +38,11 @@
             this.Car_bt = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Type_bt = new System.Windows.Forms.Button();
-            this.C_typeBox = new System.Windows.Forms.ComboBox();
-            this.type_Hard = new System.Windows.Forms.RadioButton();
-            this.type_Normal = new System.Windows.Forms.RadioButton();
-            this.type_Soft = new System.Windows.Forms.RadioButton();
+            this.carType_combo = new System.Windows.Forms.ComboBox();
             this.Car_type = new System.Windows.Forms.Label();
             this.User_type = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.genderCombo = new System.Windows.Forms.ComboBox();
             this.Member_add_LB = new System.Windows.Forms.Label();
             this.Member_gender_LB = new System.Windows.Forms.Label();
             this.Member_age_LB = new System.Windows.Forms.Label();
@@ -52,7 +50,7 @@
             this.Member_add = new System.Windows.Forms.TextBox();
             this.Member_age = new System.Windows.Forms.TextBox();
             this.Member_name = new System.Windows.Forms.TextBox();
-            this.genderCombo = new System.Windows.Forms.ComboBox();
+            this.driveType_combo = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -153,11 +151,9 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.driveType_combo);
             this.panel2.Controls.Add(this.Type_bt);
-            this.panel2.Controls.Add(this.C_typeBox);
-            this.panel2.Controls.Add(this.type_Hard);
-            this.panel2.Controls.Add(this.type_Normal);
-            this.panel2.Controls.Add(this.type_Soft);
+            this.panel2.Controls.Add(this.carType_combo);
             this.panel2.Controls.Add(this.Car_type);
             this.panel2.Controls.Add(this.User_type);
             this.panel2.Location = new System.Drawing.Point(162, 336);
@@ -177,54 +173,18 @@
             this.Type_bt.UseVisualStyleBackColor = false;
             this.Type_bt.Click += new System.EventHandler(this.Type_bt_Click);
             // 
-            // C_typeBox
+            // carType_combo
             // 
-            this.C_typeBox.FormattingEnabled = true;
-            this.C_typeBox.Items.AddRange(new object[] {
-            "소형",
-            "중형",
-            "대형"});
-            this.C_typeBox.Location = new System.Drawing.Point(300, 47);
-            this.C_typeBox.Name = "C_typeBox";
-            this.C_typeBox.Size = new System.Drawing.Size(121, 20);
-            this.C_typeBox.TabIndex = 15;
-            this.C_typeBox.SelectedIndexChanged += new System.EventHandler(this.C_type1_SelectedIndexChanged);
-            // 
-            // type_Hard
-            // 
-            this.type_Hard.AutoSize = true;
-            this.type_Hard.Location = new System.Drawing.Point(100, 91);
-            this.type_Hard.Name = "type_Hard";
-            this.type_Hard.Size = new System.Drawing.Size(49, 16);
-            this.type_Hard.TabIndex = 12;
-            this.type_Hard.TabStop = true;
-            this.type_Hard.Text = "Hard";
-            this.type_Hard.UseVisualStyleBackColor = true;
-            this.type_Hard.CheckedChanged += new System.EventHandler(this.type_Hard_CheckedChanged);
-            // 
-            // type_Normal
-            // 
-            this.type_Normal.AutoSize = true;
-            this.type_Normal.Location = new System.Drawing.Point(100, 70);
-            this.type_Normal.Name = "type_Normal";
-            this.type_Normal.Size = new System.Drawing.Size(64, 16);
-            this.type_Normal.TabIndex = 13;
-            this.type_Normal.TabStop = true;
-            this.type_Normal.Text = "Normal";
-            this.type_Normal.UseVisualStyleBackColor = true;
-            this.type_Normal.CheckedChanged += new System.EventHandler(this.type_Normal_CheckedChanged);
-            // 
-            // type_Soft
-            // 
-            this.type_Soft.AutoSize = true;
-            this.type_Soft.Location = new System.Drawing.Point(100, 49);
-            this.type_Soft.Name = "type_Soft";
-            this.type_Soft.Size = new System.Drawing.Size(44, 16);
-            this.type_Soft.TabIndex = 14;
-            this.type_Soft.TabStop = true;
-            this.type_Soft.Text = "Soft";
-            this.type_Soft.UseVisualStyleBackColor = true;
-            this.type_Soft.CheckedChanged += new System.EventHandler(this.U_type1_CheckedChanged_1);
+            this.carType_combo.FormattingEnabled = true;
+            this.carType_combo.Items.AddRange(new object[] {
+            "가솔린",
+            "디젤",
+            "LPG"});
+            this.carType_combo.Location = new System.Drawing.Point(300, 47);
+            this.carType_combo.Name = "carType_combo";
+            this.carType_combo.Size = new System.Drawing.Size(121, 20);
+            this.carType_combo.TabIndex = 15;
+            this.carType_combo.SelectedIndexChanged += new System.EventHandler(this.C_type1_SelectedIndexChanged);
             // 
             // Car_type
             // 
@@ -262,6 +222,18 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(514, 120);
             this.panel3.TabIndex = 11;
+            // 
+            // genderCombo
+            // 
+            this.genderCombo.FormattingEnabled = true;
+            this.genderCombo.Items.AddRange(new object[] {
+            "남",
+            "여"});
+            this.genderCombo.Location = new System.Drawing.Point(211, 64);
+            this.genderCombo.Name = "genderCombo";
+            this.genderCombo.Size = new System.Drawing.Size(36, 20);
+            this.genderCombo.TabIndex = 16;
+            this.genderCombo.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Member_add_LB
             // 
@@ -327,17 +299,18 @@
             this.Member_name.TabIndex = 11;
             this.Member_name.TextChanged += new System.EventHandler(this.Member_name_TextChanged);
             // 
-            // genderCombo
+            // driveType_combo
             // 
-            this.genderCombo.FormattingEnabled = true;
-            this.genderCombo.Items.AddRange(new object[] {
-            "남",
-            "여"});
-            this.genderCombo.Location = new System.Drawing.Point(211, 64);
-            this.genderCombo.Name = "genderCombo";
-            this.genderCombo.Size = new System.Drawing.Size(36, 20);
-            this.genderCombo.TabIndex = 16;
-            this.genderCombo.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.driveType_combo.FormattingEnabled = true;
+            this.driveType_combo.Items.AddRange(new object[] {
+            "Soft",
+            "Normal",
+            "Hard"});
+            this.driveType_combo.Location = new System.Drawing.Point(100, 47);
+            this.driveType_combo.Name = "driveType_combo";
+            this.driveType_combo.Size = new System.Drawing.Size(121, 20);
+            this.driveType_combo.TabIndex = 17;
+            this.driveType_combo.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
             // 
             // MainUserinfo
             // 
@@ -374,10 +347,7 @@
         private System.Windows.Forms.Button exit;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button Type_bt;
-        private System.Windows.Forms.ComboBox C_typeBox;
-        private System.Windows.Forms.RadioButton type_Hard;
-        private System.Windows.Forms.RadioButton type_Normal;
-        private System.Windows.Forms.RadioButton type_Soft;
+        private System.Windows.Forms.ComboBox carType_combo;
         private System.Windows.Forms.Label Car_type;
         private System.Windows.Forms.Label User_type;
         private System.Windows.Forms.Panel panel3;
@@ -389,6 +359,7 @@
         private System.Windows.Forms.TextBox Member_age;
         private System.Windows.Forms.TextBox Member_name;
         private System.Windows.Forms.ComboBox genderCombo;
+        private System.Windows.Forms.ComboBox driveType_combo;
     }
 }
 

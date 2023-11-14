@@ -59,10 +59,10 @@
             // login_logo
             // 
             this.login_logo.AutoSize = true;
-            this.login_logo.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login_logo.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.login_logo.Location = new System.Drawing.Point(8, 4);
             this.login_logo.Name = "login_logo";
-            this.login_logo.Size = new System.Drawing.Size(85, 46);
+            this.login_logo.Size = new System.Drawing.Size(94, 46);
             this.login_logo.TabIndex = 1;
             this.login_logo.Text = "cCc";
             // 
@@ -85,10 +85,10 @@
             // loginlogo2
             // 
             this.loginlogo2.AutoSize = true;
-            this.loginlogo2.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginlogo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginlogo2.Location = new System.Drawing.Point(138, 41);
             this.loginlogo2.Name = "loginlogo2";
-            this.loginlogo2.Size = new System.Drawing.Size(128, 69);
+            this.loginlogo2.Size = new System.Drawing.Size(136, 69);
             this.loginlogo2.TabIndex = 1;
             this.loginlogo2.Text = "cCc";
             // 
@@ -180,6 +180,7 @@
             // 
             this.pw_textbox.Location = new System.Drawing.Point(54, 228);
             this.pw_textbox.Name = "pw_textbox";
+            this.pw_textbox.PasswordChar = '*';
             this.pw_textbox.Size = new System.Drawing.Size(285, 26);
             this.pw_textbox.TabIndex = 2;
             this.pw_textbox.TextChanged += new System.EventHandler(this.pw_textbox_TextChanged);

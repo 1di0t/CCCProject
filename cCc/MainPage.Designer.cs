@@ -177,6 +177,7 @@
             // 
             this.BP_date.Location = new System.Drawing.Point(276, 245);
             this.BP_date.Name = "BP_date";
+            this.BP_date.ReadOnly = true;
             this.BP_date.Size = new System.Drawing.Size(53, 21);
             this.BP_date.TabIndex = 16;
             this.BP_date.Text = "D-XX";
@@ -186,6 +187,7 @@
             // 
             this.W_date.Location = new System.Drawing.Point(276, 219);
             this.W_date.Name = "W_date";
+            this.W_date.ReadOnly = true;
             this.W_date.Size = new System.Drawing.Size(53, 21);
             this.W_date.TabIndex = 17;
             this.W_date.Text = "D-XX";
@@ -195,6 +197,7 @@
             // 
             this.T_date.Location = new System.Drawing.Point(276, 194);
             this.T_date.Name = "T_date";
+            this.T_date.ReadOnly = true;
             this.T_date.Size = new System.Drawing.Size(53, 21);
             this.T_date.TabIndex = 18;
             this.T_date.Text = "D-XX";
@@ -204,6 +207,7 @@
             // 
             this.C_date.Location = new System.Drawing.Point(276, 131);
             this.C_date.Name = "C_date";
+            this.C_date.ReadOnly = true;
             this.C_date.Size = new System.Drawing.Size(53, 21);
             this.C_date.TabIndex = 19;
             this.C_date.Text = "D-XX";
@@ -213,6 +217,7 @@
             // 
             this.BF_date.Location = new System.Drawing.Point(276, 104);
             this.BF_date.Name = "BF_date";
+            this.BF_date.ReadOnly = true;
             this.BF_date.Size = new System.Drawing.Size(53, 21);
             this.BF_date.TabIndex = 20;
             this.BF_date.Text = "D-XX";
@@ -222,6 +227,7 @@
             // 
             this.E_date.Location = new System.Drawing.Point(276, 79);
             this.E_date.Name = "E_date";
+            this.E_date.ReadOnly = true;
             this.E_date.Size = new System.Drawing.Size(53, 21);
             this.E_date.TabIndex = 21;
             this.E_date.Text = "D-XX";
@@ -231,6 +237,7 @@
             // 
             this.M_date.Location = new System.Drawing.Point(276, 55);
             this.M_date.Name = "M_date";
+            this.M_date.ReadOnly = true;
             this.M_date.Size = new System.Drawing.Size(53, 21);
             this.M_date.TabIndex = 22;
             this.M_date.Text = "D-XX";
@@ -326,7 +333,7 @@
             this.car_comp1.TabIndex = 15;
             this.car_comp1.Text = "미션 오일";
             // 
-            // Main
+            // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -335,7 +342,7 @@
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Main";
+            this.Name = "MainPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Main_Load);

@@ -221,6 +221,7 @@ namespace cCc
             // 
             this.textBox3.Location = new System.Drawing.Point(123, 9);
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(103, 21);
             this.textBox3.TabIndex = 5;
             this.textBox3.Text = "20xx-xx-xx";
@@ -260,6 +261,7 @@ namespace cCc
             // 
             this.textBox2.Location = new System.Drawing.Point(123, 9);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(103, 21);
             this.textBox2.TabIndex = 5;
             this.textBox2.Text = "20xx-xx-xx";
@@ -299,6 +301,7 @@ namespace cCc
             // 
             this.textBox1.Location = new System.Drawing.Point(123, 9);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(103, 21);
             this.textBox1.TabIndex = 4;
             this.textBox1.Text = "20xx-xx-xx";
@@ -424,6 +427,7 @@ namespace cCc
             // 
             this.textBox6.Location = new System.Drawing.Point(123, 9);
             this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(103, 21);
             this.textBox6.TabIndex = 5;
             this.textBox6.Text = "20xx-xx-xx";
@@ -463,6 +467,7 @@ namespace cCc
             // 
             this.textBox5.Location = new System.Drawing.Point(123, 9);
             this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(103, 21);
             this.textBox5.TabIndex = 5;
             this.textBox5.Text = "20xx-xx-xx";
@@ -502,6 +507,7 @@ namespace cCc
             // 
             this.textBox4.Location = new System.Drawing.Point(123, 9);
             this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(103, 21);
             this.textBox4.TabIndex = 5;
             this.textBox4.Text = "20xx-xx-xx";
