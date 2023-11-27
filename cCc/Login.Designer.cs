@@ -53,7 +53,7 @@
             this.login_design.Dock = System.Windows.Forms.DockStyle.Top;
             this.login_design.Location = new System.Drawing.Point(0, 0);
             this.login_design.Name = "login_design";
-            this.login_design.Size = new System.Drawing.Size(700, 56);
+            this.login_design.Size = new System.Drawing.Size(750, 56);
             this.login_design.TabIndex = 0;
             // 
             // login_logo
@@ -75,7 +75,7 @@
             this.exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Peru;
             this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exit.Image = ((System.Drawing.Image)(resources.GetObject("exit.Image")));
-            this.exit.Location = new System.Drawing.Point(641, 0);
+            this.exit.Location = new System.Drawing.Point(691, 0);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(59, 56);
             this.exit.TabIndex = 1;
@@ -86,7 +86,7 @@
             // 
             this.loginlogo2.AutoSize = true;
             this.loginlogo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginlogo2.Location = new System.Drawing.Point(138, 41);
+            this.loginlogo2.Location = new System.Drawing.Point(160, 55);
             this.loginlogo2.Name = "loginlogo2";
             this.loginlogo2.Size = new System.Drawing.Size(136, 69);
             this.loginlogo2.TabIndex = 1;
@@ -94,7 +94,7 @@
             // 
             // id_textbox
             // 
-            this.id_textbox.Location = new System.Drawing.Point(54, 154);
+            this.id_textbox.Location = new System.Drawing.Point(81, 200);
             this.id_textbox.Name = "id_textbox";
             this.id_textbox.Size = new System.Drawing.Size(285, 26);
             this.id_textbox.TabIndex = 2;
@@ -105,7 +105,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label2.Location = new System.Drawing.Point(50, 127);
+            this.label2.Location = new System.Drawing.Point(76, 172);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 25);
             this.label2.TabIndex = 3;
@@ -125,9 +125,9 @@
             this.login_panel.Controls.Add(this.pw_textbox);
             this.login_panel.Controls.Add(this.id_textbox);
             this.login_panel.Controls.Add(this.loginlogo2);
-            this.login_panel.Location = new System.Drawing.Point(150, 102);
+            this.login_panel.Location = new System.Drawing.Point(150, 100);
             this.login_panel.Name = "login_panel";
-            this.login_panel.Size = new System.Drawing.Size(400, 350);
+            this.login_panel.Size = new System.Drawing.Size(450, 500);
             this.login_panel.TabIndex = 4;
             // 
             // sgu_bt
@@ -135,7 +135,7 @@
             this.sgu_bt.BackColor = System.Drawing.Color.Bisque;
             this.sgu_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sgu_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.sgu_bt.Location = new System.Drawing.Point(204, 277);
+            this.sgu_bt.Location = new System.Drawing.Point(230, 380);
             this.sgu_bt.Name = "sgu_bt";
             this.sgu_bt.Size = new System.Drawing.Size(135, 48);
             this.sgu_bt.TabIndex = 4;
@@ -148,7 +148,7 @@
             this.sgi_bt.BackColor = System.Drawing.Color.Bisque;
             this.sgi_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sgi_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.sgi_bt.Location = new System.Drawing.Point(54, 277);
+            this.sgi_bt.Location = new System.Drawing.Point(80, 380);
             this.sgi_bt.Name = "sgi_bt";
             this.sgi_bt.Size = new System.Drawing.Size(135, 48);
             this.sgi_bt.TabIndex = 4;
@@ -170,7 +170,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label4.Location = new System.Drawing.Point(50, 201);
+            this.label4.Location = new System.Drawing.Point(75, 262);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 25);
             this.label4.TabIndex = 3;
@@ -178,7 +178,7 @@
             // 
             // pw_textbox
             // 
-            this.pw_textbox.Location = new System.Drawing.Point(54, 228);
+            this.pw_textbox.Location = new System.Drawing.Point(80, 290);
             this.pw_textbox.Name = "pw_textbox";
             this.pw_textbox.PasswordChar = '*';
             this.pw_textbox.Size = new System.Drawing.Size(285, 26);
@@ -190,7 +190,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(700, 500);
+            this.ClientSize = new System.Drawing.Size(750, 650);
             this.Controls.Add(this.login_panel);
             this.Controls.Add(this.login_design);
             this.Font = new System.Drawing.Font("굴림", 12F);
