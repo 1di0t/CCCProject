@@ -73,7 +73,10 @@ namespace cCc
                             login_status = 1;//아이디,비밀번호가 일치할 시 상태를 1로 저장
                         }
                         string buff = userAcount["user_id"].ToString();
+                        MainPage.getset_UserId = buff;//MainPage로 user_id값을 넘긴다
+                        Car_comp.getset_UserId = buff;//Car_comp로 user_id값을 넘긴다
                         MainUserinfo.getset_UserId = buff;//MainUserInfo로 user_id값을 넘긴다
+                        
 
                     }
                     

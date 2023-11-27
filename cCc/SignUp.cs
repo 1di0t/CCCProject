@@ -282,5 +282,16 @@ namespace cCc
         {
 
         }
+
+        private void HomeButton_Click(object sender, EventArgs e)
+        //홈버튼(클릭 시 메인화면 페이지로 이동)
+        {
+            this.Visible = false;
+
+            Login main = new Login();
+
+            main.ShowDialog();
+        }
+
     }
 }

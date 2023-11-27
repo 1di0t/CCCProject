@@ -270,6 +270,18 @@ namespace cCc
 
         }
 
+        private void Member_name_LB_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void HomeButton_Click(object sender, EventArgs e)
+        {
+            Login main = new Login();
+
+            main.ShowDialog();
+
+            this.Close();
+        }
     }
 }
