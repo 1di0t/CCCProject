@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.HomeButton = new System.Windows.Forms.Button();
             this.ExitBt = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.Userinfo_bt = new System.Windows.Forms.Button();
             this.Home_bt = new System.Windows.Forms.Button();
             this.Car_bt = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.BP_date = new System.Windows.Forms.TextBox();
-            this.W_date = new System.Windows.Forms.TextBox();
-            this.T_date = new System.Windows.Forms.TextBox();
-            this.C_date = new System.Windows.Forms.TextBox();
-            this.BF_date = new System.Windows.Forms.TextBox();
-            this.E_date = new System.Windows.Forms.TextBox();
-            this.M_date = new System.Windows.Forms.TextBox();
+            this.breakPad_Date = new System.Windows.Forms.TextBox();
+            this.wiper_Date = new System.Windows.Forms.TextBox();
+            this.tire_Date = new System.Windows.Forms.TextBox();
+            this.coolant_Date = new System.Windows.Forms.TextBox();
+            this.breakFluid_Date = new System.Windows.Forms.TextBox();
+            this.engineOil_Date = new System.Windows.Forms.TextBox();
+            this.missionOil_Date = new System.Windows.Forms.TextBox();
             this.car_Day = new System.Windows.Forms.Label();
             this.car_part = new System.Windows.Forms.Label();
             this.car_comp7 = new System.Windows.Forms.Label();
@@ -58,26 +58,32 @@
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(8, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 46);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "cCc";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Bisque;
+            this.panel1.Controls.Add(this.HomeButton);
             this.panel1.Controls.Add(this.ExitBt);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(731, 56);
+            this.panel1.Size = new System.Drawing.Size(750, 56);
             this.panel1.TabIndex = 1;
+            // 
+            // HomeButton
+            // 
+            this.HomeButton.BackColor = System.Drawing.Color.Transparent;
+            this.HomeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.HomeButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.HomeButton.FlatAppearance.BorderSize = 0;
+            this.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HomeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold);
+            this.HomeButton.Location = new System.Drawing.Point(3, 3);
+            this.HomeButton.Name = "HomeButton";
+            this.HomeButton.Size = new System.Drawing.Size(105, 50);
+            this.HomeButton.TabIndex = 8;
+            this.HomeButton.Text = "cCc";
+            this.HomeButton.UseVisualStyleBackColor = false;
+            this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
             // 
             // ExitBt
             // 
@@ -88,7 +94,7 @@
             this.ExitBt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Peru;
             this.ExitBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitBt.Image = ((System.Drawing.Image)(resources.GetObject("ExitBt.Image")));
-            this.ExitBt.Location = new System.Drawing.Point(673, 0);
+            this.ExitBt.Location = new System.Drawing.Point(691, 0);
             this.ExitBt.Name = "ExitBt";
             this.ExitBt.Size = new System.Drawing.Size(59, 56);
             this.ExitBt.TabIndex = 3;
@@ -103,7 +109,7 @@
             this.panel10.Controls.Add(this.Car_bt);
             this.panel10.Location = new System.Drawing.Point(0, 56);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(93, 639);
+            this.panel10.Size = new System.Drawing.Size(100, 600);
             this.panel10.TabIndex = 4;
             // 
             // Userinfo_bt
@@ -114,7 +120,7 @@
             this.Userinfo_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Userinfo_bt.Location = new System.Drawing.Point(0, 219);
             this.Userinfo_bt.Name = "Userinfo_bt";
-            this.Userinfo_bt.Size = new System.Drawing.Size(93, 76);
+            this.Userinfo_bt.Size = new System.Drawing.Size(100, 80);
             this.Userinfo_bt.TabIndex = 3;
             this.Userinfo_bt.Text = "사용자 정보";
             this.Userinfo_bt.UseVisualStyleBackColor = false;
@@ -129,7 +135,7 @@
             this.Home_bt.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Home_bt.Location = new System.Drawing.Point(0, 0);
             this.Home_bt.Name = "Home_bt";
-            this.Home_bt.Size = new System.Drawing.Size(93, 76);
+            this.Home_bt.Size = new System.Drawing.Size(100, 80);
             this.Home_bt.TabIndex = 3;
             this.Home_bt.Text = "메인 화면";
             this.Home_bt.UseVisualStyleBackColor = false;
@@ -143,7 +149,7 @@
             this.Car_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Car_bt.Location = new System.Drawing.Point(0, 110);
             this.Car_bt.Name = "Car_bt";
-            this.Car_bt.Size = new System.Drawing.Size(93, 76);
+            this.Car_bt.Size = new System.Drawing.Size(100, 80);
             this.Car_bt.TabIndex = 3;
             this.Car_bt.Text = "차량 부품 ";
             this.Car_bt.UseVisualStyleBackColor = false;
@@ -152,13 +158,13 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.BP_date);
-            this.panel2.Controls.Add(this.W_date);
-            this.panel2.Controls.Add(this.T_date);
-            this.panel2.Controls.Add(this.C_date);
-            this.panel2.Controls.Add(this.BF_date);
-            this.panel2.Controls.Add(this.E_date);
-            this.panel2.Controls.Add(this.M_date);
+            this.panel2.Controls.Add(this.breakPad_Date);
+            this.panel2.Controls.Add(this.wiper_Date);
+            this.panel2.Controls.Add(this.tire_Date);
+            this.panel2.Controls.Add(this.coolant_Date);
+            this.panel2.Controls.Add(this.breakFluid_Date);
+            this.panel2.Controls.Add(this.engineOil_Date);
+            this.panel2.Controls.Add(this.missionOil_Date);
             this.panel2.Controls.Add(this.car_Day);
             this.panel2.Controls.Add(this.car_part);
             this.panel2.Controls.Add(this.car_comp7);
@@ -168,79 +174,86 @@
             this.panel2.Controls.Add(this.car_comp3);
             this.panel2.Controls.Add(this.car_comp2);
             this.panel2.Controls.Add(this.car_comp1);
-            this.panel2.Location = new System.Drawing.Point(184, 134);
+            this.panel2.Location = new System.Drawing.Point(125, 100);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(467, 279);
+            this.panel2.Size = new System.Drawing.Size(600, 450);
             this.panel2.TabIndex = 5;
             // 
-            // BP_date
+            // breakPad_Date
             // 
-            this.BP_date.Location = new System.Drawing.Point(276, 245);
-            this.BP_date.Name = "BP_date";
-            this.BP_date.Size = new System.Drawing.Size(53, 21);
-            this.BP_date.TabIndex = 16;
-            this.BP_date.Text = "D-XX";
-            this.BP_date.TextChanged += new System.EventHandler(this.BP_date_TextChanged);
+            this.breakPad_Date.Location = new System.Drawing.Point(176, 417);
+            this.breakPad_Date.Name = "breakPad_Date";
+            this.breakPad_Date.ReadOnly = true;
+            this.breakPad_Date.Size = new System.Drawing.Size(70, 21);
+            this.breakPad_Date.TabIndex = 16;
+            this.breakPad_Date.Text = "D-XX";
+            this.breakPad_Date.TextChanged += new System.EventHandler(this.BP_date_TextChanged);
             // 
-            // W_date
+            // wiper_Date
             // 
-            this.W_date.Location = new System.Drawing.Point(276, 219);
-            this.W_date.Name = "W_date";
-            this.W_date.Size = new System.Drawing.Size(53, 21);
-            this.W_date.TabIndex = 17;
-            this.W_date.Text = "D-XX";
-            this.W_date.TextChanged += new System.EventHandler(this.W_date_TextChanged);
+            this.wiper_Date.Location = new System.Drawing.Point(174, 360);
+            this.wiper_Date.Name = "wiper_Date";
+            this.wiper_Date.ReadOnly = true;
+            this.wiper_Date.Size = new System.Drawing.Size(72, 21);
+            this.wiper_Date.TabIndex = 17;
+            this.wiper_Date.Text = "D-XX";
+            this.wiper_Date.TextChanged += new System.EventHandler(this.W_date_TextChanged);
             // 
-            // T_date
+            // tire_Date
             // 
-            this.T_date.Location = new System.Drawing.Point(276, 194);
-            this.T_date.Name = "T_date";
-            this.T_date.Size = new System.Drawing.Size(53, 21);
-            this.T_date.TabIndex = 18;
-            this.T_date.Text = "D-XX";
-            this.T_date.TextChanged += new System.EventHandler(this.T_date_TextChanged);
+            this.tire_Date.Location = new System.Drawing.Point(174, 303);
+            this.tire_Date.Name = "tire_Date";
+            this.tire_Date.ReadOnly = true;
+            this.tire_Date.Size = new System.Drawing.Size(72, 21);
+            this.tire_Date.TabIndex = 18;
+            this.tire_Date.Text = "D-XX";
+            this.tire_Date.TextChanged += new System.EventHandler(this.T_date_TextChanged);
             // 
-            // C_date
+            // coolant_Date
             // 
-            this.C_date.Location = new System.Drawing.Point(276, 131);
-            this.C_date.Name = "C_date";
-            this.C_date.Size = new System.Drawing.Size(53, 21);
-            this.C_date.TabIndex = 19;
-            this.C_date.Text = "D-XX";
-            this.C_date.TextChanged += new System.EventHandler(this.C_date_TextChanged);
+            this.coolant_Date.Location = new System.Drawing.Point(174, 246);
+            this.coolant_Date.Name = "coolant_Date";
+            this.coolant_Date.ReadOnly = true;
+            this.coolant_Date.Size = new System.Drawing.Size(72, 21);
+            this.coolant_Date.TabIndex = 19;
+            this.coolant_Date.Text = "D-XX";
+            this.coolant_Date.TextChanged += new System.EventHandler(this.C_date_TextChanged);
             // 
-            // BF_date
+            // breakFluid_Date
             // 
-            this.BF_date.Location = new System.Drawing.Point(276, 104);
-            this.BF_date.Name = "BF_date";
-            this.BF_date.Size = new System.Drawing.Size(53, 21);
-            this.BF_date.TabIndex = 20;
-            this.BF_date.Text = "D-XX";
-            this.BF_date.TextChanged += new System.EventHandler(this.BF_date_TextChanged);
+            this.breakFluid_Date.Location = new System.Drawing.Point(174, 189);
+            this.breakFluid_Date.Name = "breakFluid_Date";
+            this.breakFluid_Date.ReadOnly = true;
+            this.breakFluid_Date.Size = new System.Drawing.Size(72, 21);
+            this.breakFluid_Date.TabIndex = 20;
+            this.breakFluid_Date.Text = "D-XX";
+            this.breakFluid_Date.TextChanged += new System.EventHandler(this.BF_date_TextChanged);
             // 
-            // E_date
+            // engineOil_Date
             // 
-            this.E_date.Location = new System.Drawing.Point(276, 79);
-            this.E_date.Name = "E_date";
-            this.E_date.Size = new System.Drawing.Size(53, 21);
-            this.E_date.TabIndex = 21;
-            this.E_date.Text = "D-XX";
-            this.E_date.TextChanged += new System.EventHandler(this.E_date_TextChanged);
+            this.engineOil_Date.Location = new System.Drawing.Point(174, 132);
+            this.engineOil_Date.Name = "engineOil_Date";
+            this.engineOil_Date.ReadOnly = true;
+            this.engineOil_Date.Size = new System.Drawing.Size(72, 21);
+            this.engineOil_Date.TabIndex = 21;
+            this.engineOil_Date.Text = "D-XX";
+            this.engineOil_Date.TextChanged += new System.EventHandler(this.E_date_TextChanged);
             // 
-            // M_date
+            // missionOil_Date
             // 
-            this.M_date.Location = new System.Drawing.Point(276, 55);
-            this.M_date.Name = "M_date";
-            this.M_date.Size = new System.Drawing.Size(53, 21);
-            this.M_date.TabIndex = 22;
-            this.M_date.Text = "D-XX";
-            this.M_date.TextChanged += new System.EventHandler(this.M_date_TextChanged);
+            this.missionOil_Date.Location = new System.Drawing.Point(174, 75);
+            this.missionOil_Date.Name = "missionOil_Date";
+            this.missionOil_Date.ReadOnly = true;
+            this.missionOil_Date.Size = new System.Drawing.Size(72, 21);
+            this.missionOil_Date.TabIndex = 22;
+            this.missionOil_Date.Text = "D-XX";
+            this.missionOil_Date.TextChanged += new System.EventHandler(this.M_date_TextChanged);
             // 
             // car_Day
             // 
             this.car_Day.AutoSize = true;
             this.car_Day.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.car_Day.Location = new System.Drawing.Point(274, 15);
+            this.car_Day.Location = new System.Drawing.Point(170, 15);
             this.car_Day.Name = "car_Day";
             this.car_Day.Size = new System.Drawing.Size(76, 24);
             this.car_Day.TabIndex = 7;
@@ -250,7 +263,7 @@
             // 
             this.car_part.AutoSize = true;
             this.car_part.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.car_part.Location = new System.Drawing.Point(106, 15);
+            this.car_part.Location = new System.Drawing.Point(34, 15);
             this.car_part.Name = "car_part";
             this.car_part.Size = new System.Drawing.Size(40, 24);
             this.car_part.TabIndex = 8;
@@ -260,7 +273,7 @@
             // 
             this.car_comp7.AutoSize = true;
             this.car_comp7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.car_comp7.Location = new System.Drawing.Point(108, 250);
+            this.car_comp7.Location = new System.Drawing.Point(35, 421);
             this.car_comp7.Name = "car_comp7";
             this.car_comp7.Size = new System.Drawing.Size(85, 17);
             this.car_comp7.TabIndex = 9;
@@ -270,7 +283,7 @@
             // 
             this.car_comp4.AutoSize = true;
             this.car_comp4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.car_comp4.Location = new System.Drawing.Point(107, 135);
+            this.car_comp4.Location = new System.Drawing.Point(35, 250);
             this.car_comp4.Name = "car_comp4";
             this.car_comp4.Size = new System.Drawing.Size(44, 17);
             this.car_comp4.TabIndex = 10;
@@ -280,7 +293,7 @@
             // 
             this.car_comp6.AutoSize = true;
             this.car_comp6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.car_comp6.Location = new System.Drawing.Point(107, 224);
+            this.car_comp6.Location = new System.Drawing.Point(35, 364);
             this.car_comp6.Name = "car_comp6";
             this.car_comp6.Size = new System.Drawing.Size(44, 17);
             this.car_comp6.TabIndex = 11;
@@ -290,7 +303,7 @@
             // 
             this.car_comp5.AutoSize = true;
             this.car_comp5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.car_comp5.Location = new System.Drawing.Point(107, 199);
+            this.car_comp5.Location = new System.Drawing.Point(35, 307);
             this.car_comp5.Name = "car_comp5";
             this.car_comp5.Size = new System.Drawing.Size(44, 17);
             this.car_comp5.TabIndex = 12;
@@ -300,7 +313,7 @@
             // 
             this.car_comp3.AutoSize = true;
             this.car_comp3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.car_comp3.Location = new System.Drawing.Point(106, 109);
+            this.car_comp3.Location = new System.Drawing.Point(34, 193);
             this.car_comp3.Name = "car_comp3";
             this.car_comp3.Size = new System.Drawing.Size(73, 17);
             this.car_comp3.TabIndex = 13;
@@ -310,7 +323,7 @@
             // 
             this.car_comp2.AutoSize = true;
             this.car_comp2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.car_comp2.Location = new System.Drawing.Point(106, 84);
+            this.car_comp2.Location = new System.Drawing.Point(34, 136);
             this.car_comp2.Name = "car_comp2";
             this.car_comp2.Size = new System.Drawing.Size(61, 17);
             this.car_comp2.TabIndex = 14;
@@ -320,27 +333,26 @@
             // 
             this.car_comp1.AutoSize = true;
             this.car_comp1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.car_comp1.Location = new System.Drawing.Point(106, 60);
+            this.car_comp1.Location = new System.Drawing.Point(34, 79);
             this.car_comp1.Name = "car_comp1";
             this.car_comp1.Size = new System.Drawing.Size(61, 17);
             this.car_comp1.TabIndex = 15;
             this.car_comp1.Text = "미션 오일";
             // 
-            // Main
+            // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(731, 635);
+            this.ClientSize = new System.Drawing.Size(750, 650);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Main";
+            this.Name = "MainPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Main_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -349,8 +361,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button Car_bt;
@@ -358,13 +368,13 @@
         private System.Windows.Forms.Button Home_bt;
         private System.Windows.Forms.Button ExitBt;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox BP_date;
-        private System.Windows.Forms.TextBox W_date;
-        private System.Windows.Forms.TextBox T_date;
-        private System.Windows.Forms.TextBox C_date;
-        private System.Windows.Forms.TextBox BF_date;
-        private System.Windows.Forms.TextBox E_date;
-        private System.Windows.Forms.TextBox M_date;
+        private System.Windows.Forms.TextBox breakPad_Date;
+        private System.Windows.Forms.TextBox wiper_Date;
+        private System.Windows.Forms.TextBox tire_Date;
+        private System.Windows.Forms.TextBox coolant_Date;
+        private System.Windows.Forms.TextBox breakFluid_Date;
+        private System.Windows.Forms.TextBox engineOil_Date;
+        private System.Windows.Forms.TextBox missionOil_Date;
         private System.Windows.Forms.Label car_Day;
         private System.Windows.Forms.Label car_part;
         private System.Windows.Forms.Label car_comp7;
@@ -374,6 +384,7 @@
         private System.Windows.Forms.Label car_comp3;
         private System.Windows.Forms.Label car_comp2;
         private System.Windows.Forms.Label car_comp1;
+        private System.Windows.Forms.Button HomeButton;
     }
 }
 
